@@ -1,67 +1,39 @@
-function greetDevelopers(list) {
-  for (developer of list) {
-    developer.greeting = `Hi ${[developer.firstName]}, what do you like the most about ${developer.language}?`;
-  }
-  return list;
+function zero() {
+  return 0;
+}
+function one() {
+  return 1;
+}
+function two() {
+  return 2;
+}
+function three() {
+  return 3;
+}
+function four() {
+  return 4;
+}
+function five() {
+  return 5;
+}
+function six() {
+  return 6;
+}
+function seven() {
+  return 7;
+}
+function eight() {
+  return 8;
+}
+function nine() {
+  return 9;
 }
 
-const list1 = [
-  {
-    firstName: "Noah",
-    lastName: "M.",
-    country: "Switzerland",
-    continent: "Europe",
-    age: 19,
-    language: "JavaScript",
-  },
-  {
-    firstName: "Maia",
-    lastName: "S.",
-    country: "Tahiti",
-    continent: "Oceania",
-    age: 28,
-    language: "JavaScript",
-  },
-  {
-    firstName: "Shufen",
-    lastName: "L.",
-    country: "Taiwan",
-    continent: "Asia",
-    age: 35,
-    language: "HTML",
-  },
-  {
-    firstName: "Sumayah",
-    lastName: "M.",
-    country: "Tajikistan",
-    continent: "Asia",
-    age: 30,
-    language: "CSS",
-  },
-  {
-    firstName: "Sumayah",
-    lastName: "M.",
-    country: "Europe",
-    continent: "Asia",
-    age: 30,
-    language: "CSS",
-  },
-  {
-    firstName: "Sumayah",
-    lastName: "M.",
-    country: "Europe",
-    continent: "Asia",
-    age: 30,
-    language: "CSS",
-  },
-  {
-    firstName: "Sumayah",
-    lastName: "M.",
-    country: "Europe",
-    continent: "Asia",
-    age: 30,
-    language: "CSS",
-  },
-];
+function plus() {return + ()}
+function minus() {}
+function times() {}
+function dividedBy() {}
 
-console.log(greetDevelopers(list1));
+console.log(two(plus(two))) // 4
+
+// still to complete
