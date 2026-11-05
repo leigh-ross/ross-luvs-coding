@@ -1,10 +1,10 @@
-function drawStairs(n) {
-  let spaces = n - 1;
-  let result = "";
-  for (let i = 0; i < n; i++) {
-    result += "I\n";
-  }
-  return result
-}
+function aliasGen(first, last) {
+  let auxFirst = first[0].toUpperCase();
+  let auxLast = last[0].toUpperCase();
 
-console.log(drawStairs(3))
+  if (firstName[auxFirst] && surname[auxLast]) {
+    return firstName[auxFirst] + " " + surname[auxLast];
+  } else {
+    return "Your name must start with a letter from A - Z.";
+  }
+}
