@@ -1,13 +1,8 @@
-function countDevelopers(list) {
-  const a = [...list];
-  let count = 0;
-  for (let i = 0; i < a.length; i++) {
-    if (a[i].continent == "Europe" && a[i].language == "JavaScript") {
-      console.log(a[i].country);
-      count += 1;
-    }
+function greetDevelopers(list) {
+  for (developer of list) {
+    developer.greeting = `Hi ${[developer.firstName]}, what do you like the most about ${developer.language}?`;
   }
-  return count;
+  return list;
 }
 
 const list1 = [
@@ -69,4 +64,4 @@ const list1 = [
   },
 ];
 
-console.log(countDevelopers(list1));
+console.log(greetDevelopers(list1));
