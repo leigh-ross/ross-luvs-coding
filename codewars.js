@@ -1,25 +1,26 @@
-function stringExpansion(s) {
-  let result = "";
-  let multiplier = 1;
-  for (character of s) {
-    if (/\d/.test(character)) {
-      multiplier = Number(character);
-    } else {
-      result += character.repeat(multiplier);
+/*
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+Additionally, if the number is negative, return 0.
+
+Note: If a number is a multiple of both 3 and 5, only count it once.
+*/
+
+function solution(number) {
+  let sum = 0;
+  const multiplesWithDupe = [];
+  for (let i = 1; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      multiplesWithDupe.push(i);
     }
   }
-  return result;
+  const multiples = [...new Set(multiplesWithDupe)];
+  for (multiple of multiples) {
+    sum += multiple;
+  }
+  return sum;
 }
 
-console.log(stringExpansion("3abc")); //"aaabbbccc"
-console.log(stringExpansion("3D2a5d2f")); //"DDDaadddddff"
-console.log(stringExpansion("0d0a0v0t0y")); //""
-console.log(stringExpansion("3d332f2a")); //"dddffaa"
-console.log(stringExpansion("abcde")); //"abcde"
-console.log(stringExpansion("a2bcde")); //"abbccddee"
-
-/*
-The first occurrence of a numeric value should be the number of times each character behind it is repeated, until the next numeric value appears
-If there are multiple consecutive numeric characters, only the last one should be used (ignore the previous ones)
-Empty strings should return an empty string.
-*/
+console.log(solution(10)); // 23
